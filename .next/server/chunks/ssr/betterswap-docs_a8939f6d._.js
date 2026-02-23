@@ -1,3 +1,0 @@
-module.exports=[45441,a=>{a.n(a.i(79897))},32118,a=>{a.n(a.i(88171))},3131,a=>{a.n(a.i(42204))},15869,a=>{a.n(a.i(57083))},12377,a=>{a.n(a.i(77956))},57083,(a,b,c)=>{"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return f}});let d=a.r(13096),e=a.r(19313);function f(){return(0,d.jsx)(e.HTTPAccessErrorFallback,{status:401,message:"You're not authorized to access this page."})}("function"==typeof c.default||"object"==typeof c.default&&null!==c.default)&&void 0===c.default.__esModule&&(Object.defineProperty(c.default,"__esModule",{value:!0}),Object.assign(c.default,c),b.exports=c.default)}];
-
-//# sourceMappingURL=betterswap-docs_a8939f6d._.js.map
