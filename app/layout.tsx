@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             <a href="/" className="flex items-center gap-2">
                                 <Image src="/logo.png" alt="BetterSwap" width={24} height={24} className="shrink-0" />
                                 <span className="text-sm font-semibold tracking-wide text-white">
-                                    Better<span className="text-[hsl(221_85%_60%)]">Swap</span>
+                                    BetterSwap
                                 </span>
                                 <span className="rounded-full bg-white/5 px-2 py-0.5 text-xs text-white/40">Docs</span>
                             </a>
