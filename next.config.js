@@ -26,10 +26,8 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    experimental: {
-        turbo: {
-            root: __dirname,
-        },
+    turbopack: {
+        root: __dirname,
     },
     async headers() {
         return [
