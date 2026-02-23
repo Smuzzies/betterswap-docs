@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     {/* Header */}
                     <header className="sticky top-0 z-50 border-b border-white/5 bg-[hsl(220_43%_3%)] backdrop-blur-xl">
                         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 lg:px-8">
-                            <a href="/" className="flex items-center gap-3">
+                            <a href="/" className="flex items-center gap-2 sm:gap-3">
                                 <Image src="/logo.webp" alt="BetterSwap" width={32} height={32} className="shrink-0" />
                                 <span className="text-base font-semibold tracking-wide text-white">
                                     BetterSwap
@@ -41,9 +41,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                 href="https://betterswap.io"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-sm text-white/40 transition-colors hover:text-white/70"
+                                className="shrink-0 text-sm text-white/40 transition-colors hover:text-white/70"
                             >
-                                Launch BetterSwap App →
+                                <span className="sm:hidden">Launch App →</span>
+                                <span className="hidden sm:inline">Launch BetterSwap App →</span>
                             </a>
                         </div>
                     </header>
