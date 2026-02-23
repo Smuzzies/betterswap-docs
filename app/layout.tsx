@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     },
     description: "Learn how to use BetterSwap — the VeChain DEX aggregator.",
     icons: {
-        icon: "/logo.png",
+        icon: "/logo.webp",
     },
 };
 
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <header className="sticky top-0 z-50 border-b border-white/5 bg-[hsl(220_43%_3%)] backdrop-blur-xl">
                         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 lg:px-8">
                             <a href="/" className="flex items-center gap-3">
-                                <Image src="/logo.png" alt="BetterSwap" width={32} height={32} className="shrink-0" />
+                                <Image src="/logo.webp" alt="BetterSwap" width={32} height={32} className="shrink-0" />
                                 <span className="text-base font-semibold tracking-wide text-white">
                                     BetterSwap
                                 </span>

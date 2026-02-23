@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageTitle, SectionHeading, Hint, Step, DocImage } from "@/components/ui";
+import { PageTitle, SectionHeading, Hint, Step, DocImage, DocVideo } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function SwapPage() {
                 The main purpose of BetterSwap is of course to swap one token for another token. Since we are an aggregator, we look for the best trading route to give you the best ratio possible.
             </p>
 
-            <DocImage src="/docs/swap.gif" alt="Swap interface overview" caption="Swap" />
+            <DocVideo src="/docs/swap.webm" caption="Swap" />
 
             {/* From */}
             <section className="flex flex-col gap-4">
@@ -32,7 +32,7 @@ export default function SwapPage() {
                     <Step n={1} title="Token selection">
                         <div className="flex flex-col gap-2">
                             <p>Use the token selector at the right to open the token selection dialog. Select the token from the list, or use the search function to find it.</p>
-                            <DocImage src="/docs/token-selector.png" alt="Token selector dialog" maxW="max-w-md" />
+                            <DocImage src="/docs/token-selector.webp" alt="Token selector dialog" maxW="max-w-md" />
                         </div>
                     </Step>
                     <Step n={2} title="Token input">
@@ -41,7 +41,7 @@ export default function SwapPage() {
                             <Hint type="info">
                                 To remind you about the tokens that you own, we show your balance above the token selector.
                             </Hint>
-                            <DocImage src="/docs/token-from.gif" alt="Selecting token amount in From field" maxW="max-w-md" />
+                            <DocVideo src="/docs/token-from.webm" maxW="max-w-md" />
                             <Hint type="danger">
                                 Always pay attention to the $ value of your input to prevent user errors.
                             </Hint>
@@ -64,7 +64,7 @@ export default function SwapPage() {
                         <div className="flex flex-col gap-2">
                             <p>When you use the token input from the <strong className="text-white/80">From</strong> field, the <strong className="text-white/80">To</strong> input will be automatically populated. However, you can also do it the other way around.</p>
                             <p>Select the token input area, and type the amount of tokens you want to buy. In the example below you can see we first type in the <strong className="text-white/80">From</strong> field — this populates the <strong className="text-white/80">To</strong> field. Then we remove the input and change it to 1000 in the <strong className="text-white/80">To</strong> field, which populates the <strong className="text-white/80">From</strong> field.</p>
-                            <DocImage src="/docs/token-to.gif" alt="Two-way token input" maxW="max-w-xl" />
+                            <DocVideo src="/docs/token-to.webm" maxW="max-w-xl" />
                             <Hint type="danger">
                                 Always pay attention to the $ value of your input to prevent user errors.
                             </Hint>
@@ -78,7 +78,7 @@ export default function SwapPage() {
                 <p className="text-sm leading-relaxed text-white/60">
                     Use the big round switch button to easily switch the amounts of the <strong className="text-white/80">From</strong> and <strong className="text-white/80">To</strong> input fields. It will use the amount you typed in last. When you typed in 1000 VET in the From field and use the switch button, the 1000 VET will go to the To field (<em>not the auto-populated value</em>).
                 </p>
-                <DocImage src="/docs/swap-switch.png" alt="Switch button" maxW="max-w-md" />
+                <DocImage src="/docs/swap-switch.webp" alt="Switch button" maxW="max-w-md" />
             </section>
 
             {/* Execute */}
@@ -99,7 +99,7 @@ export default function SwapPage() {
                 <p className="text-sm leading-relaxed text-white/60">
                     In the top right, you can set the maximum slippage. We have default options for <strong className="text-white/80">0.1% | 0.5% | 1.0%</strong> and a custom option.
                 </p>
-                <DocImage src="/docs/slippage.png" alt="Slippage settings" caption="Set Maximum slippage" />
+                <DocImage src="/docs/slippage.webp" alt="Slippage settings" caption="Set Maximum slippage" />
                 <Hint type="info">
                     <strong className="text-white/80">What is slippage?</strong> Slippage on a decentralized exchange (DEX) refers to the difference between the expected price of a trade and the actual price at which the trade is executed. This typically happens due to market volatility and liquidity constraints.
                 </Hint>
@@ -117,7 +117,7 @@ export default function SwapPage() {
                 <p className="text-sm leading-relaxed text-white/60">
                     The route will preview the route the token swap will use to make the trade possible. Since we are an aggregator, the route could go via any DEX on VeChain, even multiple on the same trade!
                 </p>
-                <DocImage src="/docs/swap-route.png" alt="Swap route visualization" />
+                <DocImage src="/docs/swap-route.webp" alt="Swap route visualization" />
             </section>
 
             {/* Price impact */}
@@ -137,7 +137,7 @@ export default function SwapPage() {
                 <Hint type="success">
                     To limit price impact, we advise splitting up a bigger trade into smaller ones.
                 </Hint>
-                <DocImage src="/docs/price-impact.gif" alt="Price impact colour indicator" />
+                <DocVideo src="/docs/price-impact.webm" />
             </section>
 
             {/* Trading fee */}

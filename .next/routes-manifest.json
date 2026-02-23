@@ -1,0 +1,161 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        }
+      ],
+      "regex": "^(?:/(.*))(?:/)?$"
+    }
+  ],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/features/pool2earn",
+      "regex": "^/features/pool2earn(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/pool2earn(?:/)?$"
+    },
+    {
+      "page": "/features/shopping-cart",
+      "regex": "^/features/shopping\\-cart(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/shopping\\-cart(?:/)?$"
+    },
+    {
+      "page": "/introduction",
+      "regex": "^/introduction(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/introduction(?:/)?$"
+    },
+    {
+      "page": "/our-team",
+      "regex": "^/our\\-team(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/our\\-team(?:/)?$"
+    },
+    {
+      "page": "/pool/all-pools",
+      "regex": "^/pool/all\\-pools(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pool/all\\-pools(?:/)?$"
+    },
+    {
+      "page": "/pool/create",
+      "regex": "^/pool/create(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pool/create(?:/)?$"
+    },
+    {
+      "page": "/pool/my-positions",
+      "regex": "^/pool/my\\-positions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pool/my\\-positions(?:/)?$"
+    },
+    {
+      "page": "/quickstart",
+      "regex": "^/quickstart(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/quickstart(?:/)?$"
+    },
+    {
+      "page": "/trade/send",
+      "regex": "^/trade/send(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/trade/send(?:/)?$"
+    },
+    {
+      "page": "/trade/swap",
+      "regex": "^/trade/swap(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/trade/swap(?:/)?$"
+    },
+    {
+      "page": "/trade/wrap",
+      "regex": "^/trade/wrap(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/trade/wrap(?:/)?$"
+    },
+    {
+      "page": "/vebetter/dashboard",
+      "regex": "^/vebetter/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/vebetter/dashboard(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

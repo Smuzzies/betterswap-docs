@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageTitle, SectionHeading, DocImage } from "@/components/ui";
+import { PageTitle, SectionHeading, DocVideo } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export default function Pool2EarnPage() {
                         </span>
                     </li>
                 </ol>
-                <DocImage src="/docs/pool2earn-add.gif" alt="Adding liquidity to Pool2Earn" caption="Adding liquidity to the B3TR-VET pool" />
+                <DocVideo src="/docs/pool2earn-add.webm" caption="Adding liquidity to the B3TR-VET pool" />
                 <ol className="flex flex-col gap-2 text-sm text-white/60" start={4}>
                     <li className="flex gap-2">
                         <span className="shrink-0 font-semibold text-white/40">4.</span>
@@ -57,7 +57,7 @@ export default function Pool2EarnPage() {
                 <p className="text-sm leading-relaxed text-white/60">
                     You can freely add/remove your liquidity while the round is ongoing. Feel free to remove your liquidity just before the snapshot, and put it back in after.
                 </p>
-                <DocImage src="/docs/pool2earn-remove.gif" alt="Removing liquidity from Pool2Earn" caption="Removing liquidity from the B3TR-VET pool" />
+                <DocVideo src="/docs/pool2earn-remove.webm" caption="Removing liquidity from the B3TR-VET pool" />
             </section>
 
             {/* FAQs */}

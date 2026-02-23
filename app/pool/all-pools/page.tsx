@@ -21,7 +21,7 @@ export default function AllPoolsPage() {
                 <p className="text-sm leading-relaxed text-white/60">
                     BetterSwap's Liquidity Pools feature enables users to provide liquidity for token pairs and earn rewards from trading fees. By contributing assets to these pools, you help facilitate smooth trading for all users while potentially earning passive income. The Pools page gives you a comprehensive view of all available liquidity opportunities on the VeChainThor blockchain.
                 </p>
-                <DocImage src="/docs/all-pools.png" alt="All Pools page" />
+                <DocImage src="/docs/all-pools.webp" alt="All Pools page" />
             </section>
 
             {/* How to use */}

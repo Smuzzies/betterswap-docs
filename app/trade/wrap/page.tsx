@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageTitle, SectionHeading, Hint, Step, DocImage, TokenAddress, TipsList } from "@/components/ui";
+import { PageTitle, SectionHeading, Hint, Step, DocVideo, TokenAddress, TipsList } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function WrapPage() {
                 <p className="text-sm leading-relaxed text-white/60">
                     In the decentralized finance (DeFi) and NFT space, wrapped tokens play a crucial role. They allow for the efficient, smooth, and fast movement of funds — essential in DeFi applications and NFT Marketplaces. They are created to address the challenge of interoperability between different platforms throughout the VeChain ecosystem (and other blockchains).
                 </p>
-                <DocImage src="/docs/wrap.gif" alt="Wrapping VET" maxW="max-w-sm" />
+                <DocVideo src="/docs/wrap.webm" maxW="max-w-sm" />
             </section>
 
             {/* How to wrap */}

@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/trade/layout,_N_T_/trade/swap/layout,_N_T_/trade/swap/page,_N_T_/trade/swap"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/trade/swap/__PAGE__",
+    "/trade/swap",
+    "/trade",
+    "/_index",
+    "/_head"
+  ]
+}

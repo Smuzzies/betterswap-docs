@@ -51,6 +51,20 @@ export const DocImage = ({ src, alt, caption, maxW = "max-w-2xl" }: { src: strin
     </figure>
 );
 
+export const DocVideo = ({ src, caption, maxW = "max-w-2xl" }: { src: string; caption?: string; maxW?: string }) => (
+    <figure className={`my-4 overflow-hidden rounded-2xl border border-white/5 bg-soft ${maxW}`}>
+        <video
+            src={src}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full object-contain"
+        />
+        {caption && <figcaption className="px-4 py-2 text-center text-xs text-white/40">{caption}</figcaption>}
+    </figure>
+);
+
 export const TokenAddress = ({ symbol, address, url }: { symbol: string; address: string; url: string }) => (
     <li className="flex flex-wrap items-center gap-2 text-sm">
         <span className="rounded bg-soft px-2 py-0.5 font-mono font-semibold text-white">{symbol}</span>

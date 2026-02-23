@@ -1,0 +1,10 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_global-error/page.js")
+R.c("server/chunks/ssr/d62aa_59ffab67._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__ed3e9b69._.js")
+R.c("server/chunks/ssr/d62aa_next_dist_8386b343._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__a4919046._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__534c525d._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__3cc6b00a._.js")
+R.c("server/chunks/ssr/betterswap-docs__next-internal_server_app__global-error_page_actions_94bd1ede.js")
+R.m(50452)
+module.exports=R.m(50452).exports

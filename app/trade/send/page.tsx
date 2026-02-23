@@ -22,7 +22,7 @@ export default function SendPage() {
                 <p className="text-sm leading-relaxed text-white/60">
                     BetterSwap's Send feature streamlines crypto transfers with notable advantages over traditional wallets. It offers an all-in-one environment to trade and transfer without switching applications. The intuitive interface includes helpful features like percentage-based selection and cart functionality for batching transactions. With enhanced security measures and support for <strong className="text-white/80">.vet domain names</strong> instead of lengthy addresses, BetterSwap makes sending crypto both simpler and safer.
                 </p>
-                <DocImage src="/docs/send.png" alt="Send interface" maxW="max-w-sm" />
+                <DocImage src="/docs/send.webp" alt="Send interface" maxW="max-w-sm" />
             </section>
 
             {/* How to send */}

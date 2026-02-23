@@ -1,0 +1,17 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/features/pool2earn/page": "/features/pool2earn",
+  "/features/shopping-cart/page": "/features/shopping-cart",
+  "/introduction/page": "/introduction",
+  "/our-team/page": "/our-team",
+  "/page": "/",
+  "/pool/all-pools/page": "/pool/all-pools",
+  "/pool/create/page": "/pool/create",
+  "/pool/my-positions/page": "/pool/my-positions",
+  "/quickstart/page": "/quickstart",
+  "/trade/send/page": "/trade/send",
+  "/trade/swap/page": "/trade/swap",
+  "/trade/wrap/page": "/trade/wrap",
+  "/vebetter/dashboard/page": "/vebetter/dashboard"
+}

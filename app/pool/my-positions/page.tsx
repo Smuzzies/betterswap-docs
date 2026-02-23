@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageTitle, SectionHeading, DocImage, TipsList } from "@/components/ui";
+import { PageTitle, SectionHeading, DocImage, DocVideo, TipsList } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function MyPositionsPage() {
                 <p className="text-sm leading-relaxed text-white/60">
                     My Positions is a dedicated section of BetterSwap that displays information about pools where you've contributed assets. This interface presents data on your liquidity investments, including metrics, token quantities, and pool shares. As a unique feature, BetterSwap allows you to manage liquidity positions across multiple decentralized exchanges (DEXs) within the VeChainThor ecosystem, all from a single interface.
                 </p>
-                <DocImage src="/docs/my-positions.gif" alt="My Positions interface" maxW="max-w-lg" />
+                <DocVideo src="/docs/my-positions.webm" maxW="max-w-lg" />
             </section>
 
             {/* How to use */}
@@ -94,7 +94,7 @@ export default function MyPositionsPage() {
                 <p className="text-sm leading-relaxed text-white/60">
                     BetterSwap aggregates positions from all major VeChainThor DEXs. Access Settings by clicking the gear icon to configure which DEXs are included in your view.
                 </p>
-                <DocImage src="/docs/my-positions-settings.png" alt="My Positions settings" maxW="max-w-sm" />
+                <DocImage src="/docs/my-positions-settings.webp" alt="My Positions settings" maxW="max-w-sm" />
                 <p className="text-sm leading-relaxed text-white/60">
                     Supported DEXs include: <strong className="text-white/80">BetterSwap, Vexchange, VeRocket, DThor, TurtleSwap,</strong> and <strong className="text-white/80">VeSwap</strong>. You can also toggle visibility of APY and USD values from this settings panel.
                 </p>

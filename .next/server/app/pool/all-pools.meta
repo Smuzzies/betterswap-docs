@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/pool/layout,_N_T_/pool/all-pools/layout,_N_T_/pool/all-pools/page,_N_T_/pool/all-pools"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/pool/all-pools/__PAGE__",
+    "/pool/all-pools",
+    "/pool",
+    "/_index",
+    "/_head"
+  ]
+}

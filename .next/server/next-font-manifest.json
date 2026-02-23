@@ -1,0 +1,49 @@
+{
+  "app": {
+    "[project]/betterswap-docs/app/_not-found/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/features/pool2earn/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/features/shopping-cart/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/introduction/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/our-team/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/pool/all-pools/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/pool/create/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/pool/my-positions/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/quickstart/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/trade/send/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/trade/swap/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/trade/wrap/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ],
+    "[project]/betterswap-docs/app/vebetter/dashboard/page": [
+      "static/media/0dc02305a3505331-s.p.36b9681c.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
