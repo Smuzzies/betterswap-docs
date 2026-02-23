@@ -16,7 +16,7 @@ export default function SwapPage() {
                 subtitle="Trade one token for another at the best available rate across all VeChain DEXs."
             />
 
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                 The main purpose of BetterSwap is of course to swap one token for another token. Since we are an aggregator, we look for the best trading route to give you the best ratio possible.
             </p>
 
@@ -25,7 +25,7 @@ export default function SwapPage() {
             {/* From */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="from" label="From" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     In the <strong className="text-white/80">From</strong> section, you select the token and the amount you want to trade (<em>sell</em>) for another token.
                 </p>
                 <div className="flex flex-col gap-2">
@@ -53,7 +53,7 @@ export default function SwapPage() {
             {/* To */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="to" label="To" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     In the <strong className="text-white/80">To</strong> section, you select the token you want to receive (<em>buy</em>) with the other token.
                 </p>
                 <div className="flex flex-col gap-2">
@@ -75,7 +75,7 @@ export default function SwapPage() {
 
             {/* Switch button */}
             <section className="flex flex-col gap-4">
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     Use the big round switch button to easily switch the amounts of the <strong className="text-white/80">From</strong> and <strong className="text-white/80">To</strong> input fields. It will use the amount you typed in last. When you typed in 1000 VET in the From field and use the switch button, the 1000 VET will go to the To field (<em>not the auto-populated value</em>).
                 </p>
                 <DocImage src="/docs/swap-switch.webp" alt="Switch button" maxW="max-w-md" />
@@ -84,7 +84,7 @@ export default function SwapPage() {
             {/* Execute */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="execute" label="Swap" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     When both the <strong className="text-white/80">From</strong> and the <strong className="text-white/80">To</strong> fields are populated, click the big Swap button at the bottom to execute the trade. This will open your wallet software where you'll need to approve the transaction.
                 </p>
                 <Hint type="info">
@@ -96,7 +96,7 @@ export default function SwapPage() {
             {/* Slippage */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="slippage" label="Slippage" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     In the top right, you can set the maximum slippage. We have default options for <strong className="text-white/80">0.1% | 0.5% | 1.0%</strong> and a custom option.
                 </p>
                 <DocImage src="/docs/slippage.webp" alt="Slippage settings" caption="Set Maximum slippage" />
@@ -111,10 +111,10 @@ export default function SwapPage() {
             {/* Route */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="route" label="Route" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     Below the Add to Cart button you'll find some additional information regarding your swap. When you hover on one of the three options, you'll see some additional information.
                 </p>
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     The route will preview the route the token swap will use to make the trade possible. Since we are an aggregator, the route could go via any DEX on VeChain, even multiple on the same trade!
                 </p>
                 <DocImage src="/docs/swap-route.webp" alt="Swap route visualization" />
@@ -123,13 +123,13 @@ export default function SwapPage() {
             {/* Price impact */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="price-impact" label="Price Impact" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     Price impact refers to the change in the market price of a token caused by the execution of your trade. It is directly related to liquidity and trade size — larger trades relative to available liquidity will result in higher price impact.
                 </p>
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     On BetterSwap, we visually warn you when the price impact is high:
                 </p>
-                <ul className="flex flex-col gap-1.5 text-sm text-white/60">
+                <ul className="flex flex-col gap-1.5 text-sm text-white/70 lg:text-base">
                     <li>Below 5% ⇒ Normal colour</li>
                     <li>Between 5% and 10% ⇒ <span className="font-semibold text-warning">Orange colour</span></li>
                     <li>Above 10% ⇒ <span className="font-semibold text-error">Red colour</span></li>
@@ -143,7 +143,7 @@ export default function SwapPage() {
             {/* Trading fee */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="trading-fee" label="Trading Fee" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     This will show you the trading fee for the swap you are going to perform. BetterSwap takes a <strong className="text-white/80">0.5% fee</strong> for the aggregator + routing DEX fees. Our aggregator helps you save more than the fees you pay by optimizing trade execution.
                 </p>
             </section>

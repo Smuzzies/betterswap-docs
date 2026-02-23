@@ -19,16 +19,16 @@ export default function ShoppingCartPage() {
             {/* Why unique */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="why-unique" label="Why the Cart Feature is Unique" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     Most decentralized exchanges require each swap to be confirmed individually, creating inefficiency when performing multiple operations. BetterSwap's Cart Feature addresses this by enabling users to:
                 </p>
-                <ul className="flex flex-col gap-2 text-sm text-white/60">
-                    <li>• Queue multiple transactions and execute them with a single confirmation</li>
-                    <li>• Significantly reduce overall transaction fees through efficient batching</li>
-                    <li>• Implement more sophisticated trading strategies with ease</li>
-                    <li>• Manage and review all pending transactions in one convenient interface</li>
+                <ul className="flex flex-col gap-2 pl-4 text-sm text-white/70 lg:text-base">
+                    <li className="list-disc">Queue multiple transactions and execute them with a single confirmation</li>
+                    <li className="list-disc">Significantly reduce overall transaction fees through efficient batching</li>
+                    <li className="list-disc">Implement more sophisticated trading strategies with ease</li>
+                    <li className="list-disc">Manage and review all pending transactions in one convenient interface</li>
                 </ul>
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     This innovative functionality brings the multi-transaction convenience of centralized exchanges to decentralized trading, enhancing user experience while preserving the security benefits of blockchain technology.
                 </p>
             </section>
@@ -93,13 +93,13 @@ export default function ShoppingCartPage() {
                     ].map((item) => (
                         <div key={item.title} className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
                             <p className="text-sm font-semibold text-white/80">{item.title}</p>
-                            <p className="mt-1 text-sm leading-relaxed text-white/60">{item.desc}</p>
+                            <p className="mt-1 text-sm leading-relaxed text-white/70 lg:text-base">{item.desc}</p>
                         </div>
                     ))}
                 </div>
             </section>
 
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                 That's how the Cart Feature works! It's a great way to streamline your token swapping process and save both time and fees on BetterSwap. Give it a try to see how it enhances your DEX experience!
             </p>
 

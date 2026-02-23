@@ -71,14 +71,14 @@ export default function OurTeamPage() {
 
             <section className="flex flex-col gap-4">
                 <SectionHeading id="introduction" label="Introduction" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     The Better Collective's mission is to develop innovative tools, applications, and DeFi solutions while ensuring the process is engaging and enjoyable.
                 </p>
             </section>
 
             <section className="flex flex-col gap-4">
                 <SectionHeading id="strategic-focus" label="Our Strategic Focus" />
-                <ul className="flex flex-col gap-2 text-sm text-white/60">
+                <ul className="flex flex-col gap-2 text-sm text-white/70 lg:text-base">
                     <li>
                         <strong className="text-white/80">Application Development</strong> — Creating pioneering decentralized applications for real-world challenges
                     </li>
@@ -89,7 +89,7 @@ export default function OurTeamPage() {
                         <strong className="text-white/80">Ecosystem Tools</strong> — Developing robust infrastructure to empower the VeChain community
                     </li>
                 </ul>
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     Our multidisciplinary team combines diverse technical expertise with shared vision to create solutions that are both technically sound and user-focused. We remain committed to supporting VeChain's growth through thoughtful innovation and community engagement.
                 </p>
             </section>
@@ -103,7 +103,7 @@ export default function OurTeamPage() {
                             href={member.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="gradient-border-l group relative flex flex-col overflow-hidden rounded-2xl bg-glass-effect-gradient backdrop-blur-xl transition-opacity hover:opacity-80"
+                            className="gradient-border-l group relative flex flex-col overflow-hidden rounded-2xl bg-glass-effect-gradient backdrop-blur-xl transition-colors hover:bg-white/[0.03]"
                         >
                             <div className="aspect-square w-full overflow-hidden bg-soft">
                                 <Image

@@ -18,7 +18,7 @@ export default function AllPoolsPage() {
             {/* What are pools */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="what-are-pools" label="What Are Liquidity Pools on BetterSwap" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     BetterSwap's Liquidity Pools feature enables users to provide liquidity for token pairs and earn rewards from trading fees. By contributing assets to these pools, you help facilitate smooth trading for all users while potentially earning passive income. The Pools page gives you a comprehensive view of all available liquidity opportunities on the VeChainThor blockchain.
                 </p>
                 <DocImage src="/docs/all-pools.webp" alt="All Pools page" />
@@ -75,9 +75,9 @@ export default function AllPoolsPage() {
                     ].map((item) => (
                         <div key={item.title} className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
                             <p className="text-sm font-semibold text-white/80">{item.title}</p>
-                            <ul className="mt-2 flex flex-col gap-1">
+                            <ul className="mt-2 flex flex-col gap-1 pl-4">
                                 {item.items.map((i, idx) => (
-                                    <li key={idx} className="text-sm text-white/60">• {i}</li>
+                                    <li key={idx} className="list-disc text-sm text-white/70 lg:text-base">{i}</li>
                                 ))}
                             </ul>
                         </div>

@@ -16,7 +16,7 @@ export default function CreatePoolPage() {
                 subtitle="Launch a new liquidity pool by pairing any two VeChainThor tokens."
             />
 
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                 BetterSwap allows anyone to create a new liquidity pool for any token pair on VeChainThor. Once created, the pool is immediately available for trading and liquidity provisioning by the community.
             </p>
 
@@ -25,7 +25,7 @@ export default function CreatePoolPage() {
                 <SectionHeading id="how-to-create" label="How to Create a Pool" />
                 <div className="flex flex-col gap-2">
                     <Step n={1} title="Navigate to the Pools Page">
-                        Go to <a href="https://betterswap.io/pool" target="_blank" rel="noopener noreferrer" className="text-[hsl(221_85%_60%)] underline underline-offset-2 hover:text-white/80">betterswap.io/pool</a> and click the <strong className="text-white/80">+ Create</strong> button in the top right.
+                        Go to <a href="https://betterswap.io/pool" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2 hover:text-white/80">betterswap.io/pool</a> and click the <strong className="text-white/80">+ Create</strong> button in the top right.
                     </Step>
                     <Step n={2} title="Select Token A">
                         Use the token selector to choose the first token of your pair. You can search by name or paste a contract address to find any VIP-180 token.
@@ -51,10 +51,10 @@ export default function CreatePoolPage() {
             {/* After creating */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="after-creating" label="After Creating a Pool" />
-                <p className="text-sm leading-relaxed text-white/60">
-                    After your pool is created, it will appear on the <Link href="/pool/all-pools" className="text-[hsl(221_85%_60%)] underline underline-offset-2 hover:text-white/80">All Pools</Link> page and be immediately accessible to other traders via BetterSwap's aggregator. Your initial liquidity position will appear under <Link href="/pool/my-positions" className="text-[hsl(221_85%_60%)] underline underline-offset-2 hover:text-white/80">My Positions</Link>.
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
+                    After your pool is created, it will appear on the <Link href="/pool/all-pools" className="text-link underline underline-offset-2 hover:text-white/80">All Pools</Link> page and be immediately accessible to other traders via BetterSwap's aggregator. Your initial liquidity position will appear under <Link href="/pool/my-positions" className="text-link underline underline-offset-2 hover:text-white/80">My Positions</Link>.
                 </p>
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     As the pool accumulates trading volume, you will earn a share of trading fees proportional to your liquidity contribution.
                 </p>
             </section>

@@ -19,7 +19,7 @@ export default function WrapPage() {
             {/* Understanding */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="understanding" label="Understanding Wrapped Tokens" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     In the decentralized finance (DeFi) and NFT space, wrapped tokens play a crucial role. They allow for the efficient, smooth, and fast movement of funds — essential in DeFi applications and NFT Marketplaces. They are created to address the challenge of interoperability between different platforms throughout the VeChain ecosystem (and other blockchains).
                 </p>
                 <DocVideo src="/docs/wrap.webm" maxW="max-w-sm" />

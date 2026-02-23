@@ -43,7 +43,7 @@ export default function VeBetterDashboardPage() {
                 subtitle="Vote, earn B3TR, manage Pool2Earn liquidity, and claim VeBetterDAO rewards — all in one place."
             />
 
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                 The VeBetter section of <strong className="text-white/80">BetterSwap</strong> serves as an interface for participating in the VeBetterDAO ecosystem. This dashboard allows you to vote on sustainability initiatives, manage liquidity, swap ecosystem tokens, and claim rewards — all within BetterSwap's familiar environment. The dashboard features a real-time weekly snapshot countdown timer for VeBetterDAO rounds.
             </p>
 
@@ -53,8 +53,8 @@ export default function VeBetterDashboardPage() {
                 <div className="flex flex-col gap-3">
                     {tabs.map((tab) => (
                         <div key={tab.id} id={tab.id} className="gradient-border-l relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
-                            <p className={`text-base font-semibold text-transparent bg-clip-text ${tab.gradient}`}>{tab.name}</p>
-                            <p className="mt-2 text-sm leading-relaxed text-white/60">{tab.desc}</p>
+                            <p className={`text-base font-semibold ${tab.gradient}`}>{tab.name}</p>
+                            <p className="mt-2 text-sm leading-relaxed text-white/70 lg:text-base">{tab.desc}</p>
                         </div>
                     ))}
                 </div>
@@ -67,12 +67,12 @@ export default function VeBetterDashboardPage() {
             {/* Pool2Earn cross-link */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="pool2earn" label="Pool2Earn" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     The Liquidity tab on the VeBetter Dashboard is the home of Pool2Earn — BetterSwap's program for earning B3TR rewards by providing liquidity to the B3TR/VET pair.
                 </p>
                 <Link
                     href="/features/pool2earn"
-                    className="gradient-border-r relative inline-flex w-fit items-center gap-2 rounded-xl bg-glass-effect-gradient px-4 py-2.5 text-sm font-semibold text-white/70 backdrop-blur-xl transition-colors hover:text-white"
+                    className="gradient-border-r relative inline-flex w-fit items-center gap-2 rounded-xl bg-glass-effect-gradient px-4 py-2.5 text-sm font-semibold text-white/70 backdrop-blur-xl transition-colors hover:bg-white/[0.03] hover:text-white"
                 >
                     Learn about Pool2Earn →
                 </Link>
@@ -81,14 +81,14 @@ export default function VeBetterDashboardPage() {
             {/* VeBetterDAO cross-link */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="vebetterdao" label="More about VeBetterDAO" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     For more information about VeBetterDAO's voter rewards system, read the official VeBetterDAO documentation.
                 </p>
                 <a
                     href="https://docs.vebetterdao.org/vebetterdao/voter-rewards"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="gradient-border-r relative inline-flex w-fit items-center gap-2 rounded-xl bg-glass-effect-gradient px-4 py-2.5 text-sm font-semibold text-white/70 backdrop-blur-xl transition-colors hover:text-white"
+                    className="gradient-border-r relative inline-flex w-fit items-center gap-2 rounded-xl bg-glass-effect-gradient px-4 py-2.5 text-sm font-semibold text-white/70 backdrop-blur-xl transition-colors hover:bg-white/[0.03] hover:text-white"
                 >
                     VeBetterDAO Voter Rewards ↗
                 </a>

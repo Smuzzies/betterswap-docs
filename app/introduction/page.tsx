@@ -16,7 +16,7 @@ export default function IntroductionPage() {
                 subtitle="Welcome to the BetterSwap documentation portal — your gateway to an innovative trading experience on the VeChainThor Blockchain."
             />
 
-            <div className="flex flex-col gap-4 text-sm leading-relaxed text-white/60">
+            <div className="flex flex-col gap-4 text-sm leading-relaxed text-white/70 lg:text-base">
                 <p>
                     <strong className="text-white/80">BetterSwap</strong> is a cutting-edge decentralized exchange (<strong className="text-white/80">DEX</strong>) designed to elevate your trading on the <strong className="text-white/80">VeChainThor</strong> ecosystem. Our powerful aggregation protocol connects to multiple decentralized exchanges on VeChain, helping you discover optimal exchange rates for every transaction.
                 </p>
@@ -28,7 +28,7 @@ export default function IntroductionPage() {
 
             <div>
                 <SectionHeading id="explore" label="Explore BetterSwap" />
-                <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                     <Link href="/trade/swap" className="block">
                         <Card
                             label="Trading on BetterSwap"

@@ -19,7 +19,7 @@ export default function SendPage() {
             {/* Why use */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="why-use" label="Why Use BetterSwap's Send Feature" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     BetterSwap's Send feature streamlines crypto transfers with notable advantages over traditional wallets. It offers an all-in-one environment to trade and transfer without switching applications. The intuitive interface includes helpful features like percentage-based selection and cart functionality for batching transactions. With enhanced security measures and support for <strong className="text-white/80">.vet domain names</strong> instead of lengthy addresses, BetterSwap makes sending crypto both simpler and safer.
                 </p>
                 <DocImage src="/docs/send.webp" alt="Send interface" maxW="max-w-sm" />
@@ -31,7 +31,7 @@ export default function SendPage() {
                 <div className="flex flex-col gap-2">
                     <Step n={1} title="Navigate to the Send Feature">
                         <div className="flex flex-col gap-1">
-                            <p>Go to <a href="https://betterswap.io" target="_blank" rel="noopener noreferrer" className="text-[hsl(221_85%_60%)] underline underline-offset-2 hover:text-white/80">betterswap.io</a></p>
+                            <p>Go to <a href="https://betterswap.io" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2 hover:text-white/80">betterswap.io</a></p>
                             <p>Click on <strong className="text-white/80">Trade</strong> in the main navigation</p>
                             <p>Select the <strong className="text-white/80">Send</strong> tab</p>
                         </div>

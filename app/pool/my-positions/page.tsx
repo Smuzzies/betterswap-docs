@@ -18,7 +18,7 @@ export default function MyPositionsPage() {
             {/* What are positions */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="what-are-positions" label="What Are My Positions on BetterSwap" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     My Positions is a dedicated section of BetterSwap that displays information about pools where you've contributed assets. This interface presents data on your liquidity investments, including metrics, token quantities, and pool shares. As a unique feature, BetterSwap allows you to manage liquidity positions across multiple decentralized exchanges (DEXs) within the VeChainThor ecosystem, all from a single interface.
                 </p>
                 <DocVideo src="/docs/my-positions.webm" maxW="max-w-lg" />
@@ -78,9 +78,9 @@ export default function MyPositionsPage() {
                     ].map((item) => (
                         <div key={item.title} className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
                             <p className="text-sm font-semibold text-white/80">{item.title}</p>
-                            <ul className="mt-2 flex flex-col gap-1">
+                            <ul className="mt-2 flex flex-col gap-1 pl-4">
                                 {item.items.map((i, idx) => (
-                                    <li key={idx} className="text-sm text-white/60">• {i}</li>
+                                    <li key={idx} className="list-disc text-sm text-white/70 lg:text-base">{i}</li>
                                 ))}
                             </ul>
                         </div>
@@ -91,11 +91,11 @@ export default function MyPositionsPage() {
             {/* Multi-DEX settings */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="multi-dex" label="Multi-DEX Management" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     BetterSwap aggregates positions from all major VeChainThor DEXs. Access Settings by clicking the gear icon to configure which DEXs are included in your view.
                 </p>
                 <DocImage src="/docs/my-positions-settings.webp" alt="My Positions settings" maxW="max-w-sm" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     Supported DEXs include: <strong className="text-white/80">BetterSwap, Vexchange, VeRocket, DThor, TurtleSwap,</strong> and <strong className="text-white/80">VeSwap</strong>. You can also toggle visibility of APY and USD values from this settings panel.
                 </p>
             </section>

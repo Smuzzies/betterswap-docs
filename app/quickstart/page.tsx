@@ -35,10 +35,10 @@ export default function QuickstartPage() {
             {/* Connection Options */}
             <section className="flex flex-col gap-4">
                 <SectionHeading id="connection-options" label="Connection Options" />
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     BetterSwap supports two convenient ways to access the platform:
                 </p>
-                <ul className="flex flex-col gap-2 text-sm text-white/60">
+                <ul className="flex flex-col gap-2 text-sm text-white/70 lg:text-base">
                     <li>
                         <strong className="text-white/80">VeWorld Wallet</strong> — The traditional blockchain wallet approach
                     </li>
@@ -66,7 +66,7 @@ export default function QuickstartPage() {
                 <div className="flex flex-col gap-2">
                     <Step n={1} title="Find BetterSwap">
                         In the <strong className="text-white/80">Discover tab</strong>, search for <strong className="text-white/80">BetterSwap</strong> or visit{" "}
-                        <a href="https://betterswap.io" target="_blank" rel="noopener noreferrer" className="text-[hsl(221_85%_60%)] underline underline-offset-2 hover:text-white/80">
+                        <a href="https://betterswap.io" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2 hover:text-white/80">
                             betterswap.io
                         </a>{" "}
                         directly.
@@ -88,7 +88,7 @@ export default function QuickstartPage() {
                 <div className="flex flex-col gap-2">
                     <Step n={1} title="Visit the platform">
                         Visit{" "}
-                        <a href="https://betterswap.io" target="_blank" rel="noopener noreferrer" className="text-[hsl(221_85%_60%)] underline underline-offset-2 hover:text-white/80">
+                        <a href="https://betterswap.io" target="_blank" rel="noopener noreferrer" className="text-link underline underline-offset-2 hover:text-white/80">
                             betterswap.io
                         </a>{" "}
                         in any web browser (or within the VeWorld app if installed).
@@ -132,7 +132,7 @@ export default function QuickstartPage() {
                         Click <strong className="text-white/80">Swap</strong> and confirm the transaction in your VeWorld wallet or via the social login interface.
                     </Step>
                 </div>
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     Your transaction will be processed securely through the VeChainThor blockchain, utilizing BetterSwap's aggregation protocol to find the most efficient trading route.
                 </p>
             </section>
