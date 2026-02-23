@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Rethink_Sans } from "next/font/google";
+import Image from "next/image";
 import "@/styles/globals.css";
 import { Sidebar } from "@/components/sidebar";
 import { MobileNav } from "@/components/mobile-nav";
@@ -16,6 +17,9 @@ export const metadata: Metadata = {
         template: "%s | BetterSwap Docs",
     },
     description: "Learn how to use BetterSwap — the VeChain DEX aggregator.",
+    icons: {
+        icon: "/logo.png",
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -27,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <header className="sticky top-0 z-50 border-b border-white/5 bg-[hsl(220_43%_3%)] backdrop-blur-xl">
                         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 lg:px-8">
                             <a href="/" className="flex items-center gap-2">
-                                {/* Logo wordmark */}
+                                <Image src="/logo.png" alt="BetterSwap" width={24} height={24} className="shrink-0" />
                                 <span className="text-sm font-semibold tracking-wide text-white">
                                     Better<span className="text-[hsl(221_85%_60%)]">Swap</span>
                                 </span>
