@@ -54,7 +54,7 @@ export const DocImage = ({ src, alt, caption, maxW = "max-w-2xl" }: { src: strin
 export const TokenAddress = ({ symbol, address, url }: { symbol: string; address: string; url: string }) => (
     <li className="flex flex-wrap items-center gap-2 text-sm">
         <span className="rounded bg-soft px-2 py-0.5 font-mono font-semibold text-white">{symbol}</span>
-        <Link href={url} target="_blank" className="break-all font-mono text-xs text-white/40 transition-colors hover:text-white/70">{address}</Link>
+        <Link href={url} target="_blank" rel="noopener noreferrer" className="break-all font-mono text-xs text-white/40 transition-colors hover:text-white/70">{address}</Link>
     </li>
 );
 
