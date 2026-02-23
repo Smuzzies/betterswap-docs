@@ -52,6 +52,14 @@ export default function MyPositionsPage() {
                             ],
                         },
                         {
+                            title: "Pool Detail Access",
+                            items: [
+                                "Users can select any pool to view additional information",
+                                "The detailed view displays data for both tokens in the pair",
+                                'The source DEX is shown below the token pair (e.g., "Vexchange")',
+                            ],
+                        },
+                        {
                             title: "Holdings Information",
                             items: [
                                 "Token quantities for each position",
@@ -112,6 +120,20 @@ export default function MyPositionsPage() {
                             ],
                         },
                         {
+                            title: "Liquidity Considerations",
+                            items: [
+                                "The interface allows for distributing liquidity across multiple pools",
+                                "Different pools have different characteristics that users may want to consider",
+                            ],
+                        },
+                        {
+                            title: "Timing Awareness",
+                            items: [
+                                "Market conditions can fluctuate, which may be relevant when interacting with pools",
+                                "The platform provides data that can be considered before making adjustments",
+                            ],
+                        },
+                        {
                             title: "Pool Share Information",
                             items: [
                                 "Your pool share percentage indicates your proportion of the total pool",
@@ -119,10 +141,31 @@ export default function MyPositionsPage() {
                             ],
                         },
                         {
+                            title: "Risk Information",
+                            items: [
+                                "Each pool displays APY and volatility metrics for informational purposes",
+                                "Users often consider multiple factors when interacting with liquidity pools",
+                            ],
+                        },
+                        {
                             title: "Display Customisation",
                             items: [
-                                "Settings allow tailoring the information displayed on the interface",
-                                "Choose which DEXs to include and which metrics to display",
+                                "Settings allow for tailoring the information displayed on the interface",
+                                "Users can choose which DEXs to include in their view and which metrics to display",
+                            ],
+                        },
+                        {
+                            title: "Record Keeping",
+                            items: [
+                                "It may be useful to maintain records of your liquidity activities",
+                                "Some users track additions and removals for their own documentation purposes",
+                            ],
+                        },
+                        {
+                            title: "Price Divergence Data",
+                            items: [
+                                "The interface displays price information for paired tokens",
+                                "Users can monitor this information at their discretion",
                             ],
                         },
                     ]}

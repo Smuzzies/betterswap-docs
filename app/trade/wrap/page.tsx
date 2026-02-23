@@ -45,7 +45,7 @@ export default function WrapPage() {
                         Your VeWorld wallet will prompt you to confirm and sign the transaction. Check the transaction details including the wrapped token amount and transaction fee.
                     </Step>
                     <Step n={6} title="Transaction Complete">
-                        After confirming, the wrapping process will be executed on the VeChainThor blockchain. Once completed, you will receive the wrapped version of your token in your wallet.
+                        After confirming, the wrapping process will be executed on the VeChainThor blockchain. Once completed, you will receive the wrapped version of your token. You can check the updated balance in your wallet or on BetterSwap.
                     </Step>
                 </div>
                 <Hint type="success">
@@ -81,9 +81,9 @@ export default function WrapPage() {
                             ],
                         },
                         {
-                            title: "NEVER Swap to Wrap",
+                            title: "NEVER Swap",
                             items: [
-                                "To reduce fees and transaction costs, always use the Wrapper — never swap $VET into its wrapped variant.",
+                                "To reduce fees and transaction costs, always use a wrapper to convert $VET into its wrapped variant.",
                             ],
                         },
                     ]}

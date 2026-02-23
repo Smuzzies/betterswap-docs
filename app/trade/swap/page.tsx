@@ -62,7 +62,8 @@ export default function SwapPage() {
                     </Step>
                     <Step n={2} title="Token input">
                         <div className="flex flex-col gap-2">
-                            <p>When you use the token input from the <strong className="text-white/80">From</strong> field, the <strong className="text-white/80">To</strong> input will be automatically populated. However, you can also do it the other way around — type in the To field to specify how many tokens you want to receive.</p>
+                            <p>When you use the token input from the <strong className="text-white/80">From</strong> field, the <strong className="text-white/80">To</strong> input will be automatically populated. However, you can also do it the other way around.</p>
+                            <p>Select the token input area, and type the amount of tokens you want to buy. In the example below you can see we first type in the <strong className="text-white/80">From</strong> field — this populates the <strong className="text-white/80">To</strong> field. Then we remove the input and change it to 1000 in the <strong className="text-white/80">To</strong> field, which populates the <strong className="text-white/80">From</strong> field.</p>
                             <DocImage src="/docs/token-to.gif" alt="Two-way token input" maxW="max-w-xl" />
                             <Hint type="danger">
                                 Always pay attention to the $ value of your input to prevent user errors.
@@ -111,7 +112,10 @@ export default function SwapPage() {
             <section className="flex flex-col gap-4">
                 <SectionHeading id="route" label="Route" />
                 <p className="text-sm leading-relaxed text-white/60">
-                    Below the Add to Cart button you'll find additional information about your swap. The route preview shows the path the token swap will take to make the trade possible. Since we are an aggregator, the route could go via any DEX on VeChain — even multiple on the same trade!
+                    Below the Add to Cart button you'll find some additional information regarding your swap. When you hover on one of the three options, you'll see some additional information.
+                </p>
+                <p className="text-sm leading-relaxed text-white/60">
+                    The route will preview the route the token swap will use to make the trade possible. Since we are an aggregator, the route could go via any DEX on VeChain, even multiple on the same trade!
                 </p>
                 <DocImage src="/docs/swap-route.png" alt="Swap route visualization" />
             </section>
