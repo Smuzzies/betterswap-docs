@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading, DocImage, DocVideo, TipsList } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
@@ -76,7 +76,7 @@ export default function MyPositionsPage() {
                             ],
                         },
                     ].map((item) => (
-                        <div key={item.title} className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
+                        <div key={item.title} className="panel rounded-2xl p-4">
                             <p className="text-sm font-semibold text-white/80">{item.title}</p>
                             <ul className="mt-2 flex flex-col gap-1 pl-4">
                                 {item.items.map((i, idx) => (

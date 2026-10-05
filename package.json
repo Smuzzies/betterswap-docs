@@ -1,23 +1,19 @@
 {
     "name": "betterswap-docs",
     "private": true,
+    "type": "module",
     "scripts": {
-        "dev": "next dev --turbopack",
-        "build": "next build",
-        "start": "next start"
+        "dev": "bun dev.ts",
+        "build": "bun build.tsx"
     },
     "devDependencies": {
-        "@tailwindcss/postcss": "^4.2.1",
-        "@types/node": "25.3.0",
+        "@tailwindcss/cli": "^4.2.1",
+        "@types/bun": "latest",
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
-        "typescript": "^5"
-    },
-    "dependencies": {
-        "next": "^16.1.6",
-        "postcss": "^8.5.6",
         "react": "^19.2.4",
         "react-dom": "^19.2.4",
-        "tailwindcss": "^4.2.1"
+        "tailwindcss": "^4.2.1",
+        "typescript": "^5"
     }
 }

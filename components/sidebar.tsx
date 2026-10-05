@@ -1,13 +1,8 @@
-"use client";
-
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { navSections } from "./nav";
 
-export function Sidebar() {
-    const pathname = usePathname();
+export function Sidebar({ route }: { route: string }) {
     return (
-        <nav className="flex flex-col gap-0.5">
+        <nav className="flex flex-col gap-0.5" aria-label="Documentation">
             {navSections.map((section, i) => (
                 <div key={section.group}>
                     {i > 0 && <hr className="my-3 border-white/5" />}
@@ -15,19 +10,20 @@ export function Sidebar() {
                         {section.group}
                     </p>
                     {section.items.map((item) => {
-                        const active = pathname === item.href;
+                        const active = route === item.href;
                         return (
-                            <Link
+                            <a
                                 key={item.href}
                                 href={item.href}
-                                className={`block rounded-lg px-3 py-1.5 text-sm transition-colors ${
+                                aria-current={active ? "page" : undefined}
+                                className={`block rounded-full border px-3 py-1.5 text-sm transition-colors ${
                                     active
-                                        ? "bg-white/[0.08] font-medium text-white"
-                                        : "text-white/60 hover:text-white"
+                                        ? "border-white/10 bg-white/[0.05] font-medium text-white"
+                                        : "border-transparent text-white/60 hover:text-white"
                                 }`}
                             >
                                 {item.label}
-                            </Link>
+                            </a>
                         );
                     })}
                 </div>

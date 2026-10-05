@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading, SubHeading, Hint, Step } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 

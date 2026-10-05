@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading, Card } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
@@ -29,27 +28,27 @@ export default function IntroductionPage() {
             <div>
                 <SectionHeading id="explore" label="Explore BetterSwap" />
                 <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                    <Link href="/trade/swap" className="block">
+                    <a href="/trade/swap" className="block">
                         <Card
                             label="Trading on BetterSwap"
                             desc="Swap, wrap, and send tokens with best-rate aggregation across all VeChain DEXs."
                             gradient="bg-clip-text heading-gradient-trade"
                         />
-                    </Link>
-                    <Link href="/pool/all-pools" className="block">
+                    </a>
+                    <a href="/pool/all-pools" className="block">
                         <Card
                             label="Pooling on BetterSwap"
                             desc="Provide liquidity, manage your positions, and create new pools on VeChainThor."
                             gradient="bg-clip-text heading-gradient-pools"
                         />
-                    </Link>
-                    <Link href="/vebetter/dashboard" className="block">
+                    </a>
+                    <a href="/vebetter/dashboard" className="block">
                         <Card
                             label="VeBetter on BetterSwap"
                             desc="Vote, earn B3TR rewards, manage Pool2Earn liquidity, and claim VeBetterDAO allocations."
                             gradient="bg-clip-text heading-gradient-vebetter"
                         />
-                    </Link>
+                    </a>
                 </div>
             </div>
 

@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading, Hint, Step, TipsList } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
@@ -52,7 +51,7 @@ export default function CreatePoolPage() {
             <section className="flex flex-col gap-4">
                 <SectionHeading id="after-creating" label="After Creating a Pool" />
                 <p className="text-sm leading-relaxed text-white/70 lg:text-base">
-                    After your pool is created, it will appear on the <Link href="/pool/all-pools" className="text-link underline underline-offset-2 hover:text-white/80">All Pools</Link> page and be immediately accessible to other traders via BetterSwap's aggregator. Your initial liquidity position will appear under <Link href="/pool/my-positions" className="text-link underline underline-offset-2 hover:text-white/80">My Positions</Link>.
+                    After your pool is created, it will appear on the <a href="/pool/all-pools" className="text-link underline underline-offset-2 hover:text-white/80">All Pools</a> page and be immediately accessible to other traders via BetterSwap's aggregator. Your initial liquidity position will appear under <a href="/pool/my-positions" className="text-link underline underline-offset-2 hover:text-white/80">My Positions</a>.
                 </p>
                 <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     As the pool accumulates trading volume, you will earn a share of trading fees proportional to your liquidity contribution.

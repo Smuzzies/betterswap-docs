@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading, Hint, Step, DocImage, DocVideo } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
@@ -89,7 +88,7 @@ export default function SwapPage() {
                 </p>
                 <Hint type="info">
                     Use the <strong className="text-white/80">Add to Cart</strong> feature to split up bigger trades into multiple smaller ones to reduce your price impact.{" "}
-                    <Link href="/features/shopping-cart" className="underline underline-offset-2 hover:text-white/80">Learn more →</Link>
+                    <a href="/features/shopping-cart" className="underline underline-offset-2 hover:text-white/80">Learn more →</a>
                 </Hint>
             </section>
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading, DocVideo } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
@@ -65,14 +65,14 @@ export default function Pool2EarnPage() {
                 <SectionHeading id="faq" label="Frequently Asked Questions" />
                 <div className="flex flex-col gap-3">
 
-                    <div className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
+                    <div className="panel rounded-2xl p-4">
                         <p className="text-sm font-semibold text-white/80">What is Pool2Earn?</p>
                         <p className="mt-2 text-sm leading-relaxed text-white/70 lg:text-base">
                             Pool2Earn by BetterSwap is a program that allows you to provide liquidity to the B3TR-VET pair on BetterSwap. By participating, you help create a healthy and sustainable trading environment for the $B3TR token while earning high $B3TR rewards in return.
                         </p>
                     </div>
 
-                    <div className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
+                    <div className="panel rounded-2xl p-4">
                         <p className="text-sm font-semibold text-white/80">When do I receive my Pool2Earn rewards?</p>
                         <p className="mt-2 text-sm leading-relaxed text-white/70 lg:text-base">
                             Pool2Earn rewards are currently distributed every Monday. We will distribute the allocation of the previous round to everyone who added liquidity to the B3TR-VET pair while the round that just ended was going on.
@@ -82,7 +82,7 @@ export default function Pool2EarnPage() {
                         </p>
                     </div>
 
-                    <div className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
+                    <div className="panel rounded-2xl p-4">
                         <p className="text-sm font-semibold text-white/80">How are the rewards calculated?</p>
                         <p className="mt-2 text-sm leading-relaxed text-white/70 lg:text-base">
                             Your rewards are calculated based on the following metrics:
@@ -96,14 +96,14 @@ export default function Pool2EarnPage() {
                         </p>
                     </div>
 
-                    <div className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
+                    <div className="panel rounded-2xl p-4">
                         <p className="text-sm font-semibold text-white/80">Can I remove my tokens while the round is still going on and use my $B3TR tokens to vote?</p>
                         <p className="mt-2 text-sm leading-relaxed text-white/70 lg:text-base">
                             YES! You can freely add/remove your liquidity while the round is ongoing. Feel free to remove your liquidity just before the snapshot, and put it back in after.
                         </p>
                     </div>
 
-                    <div className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
+                    <div className="panel rounded-2xl p-4">
                         <p className="text-sm font-semibold text-white/80">Why is Pool2Earn a sustainable action?</p>
                         <p className="mt-2 text-sm leading-relaxed text-white/70 lg:text-base">
                             While Pool2Earn differs from other X2Earn dApps on VeBetter, it plays a crucial role in creating a stable and sustainable environment for the B3TR token. Adequate liquidity helps reduce volatility and lowers investment risk. Thanks to the success of Pool2Earn, B3TR reached new all-time highs, as the deep liquidity pool enabled larger trades with minimal price impact, making it easier for new investors to participate seamlessly.
