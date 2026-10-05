@@ -1,6 +1,4 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
@@ -98,22 +96,15 @@ export default function OurTeamPage() {
                 <SectionHeading id="members" label="The Team" />
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
                     {team.map((member) => (
-                        <Link
+                        <a
                             key={member.name}
                             href={member.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="gradient-border-l group relative flex flex-col overflow-hidden rounded-2xl bg-glass-effect-gradient backdrop-blur-xl transition-colors hover:bg-white/[0.03]"
+                            className="panel group flex flex-col overflow-hidden rounded-2xl transition-colors hover:border-white/15"
                         >
                             <div className="aspect-square w-full overflow-hidden bg-soft">
-                                <Image
-                                    src={member.img}
-                                    alt={member.name}
-                                    width={400}
-                                    height={400}
-                                    className="h-full w-full object-cover"
-                                    unoptimized
-                                />
+                                <img src={member.img} alt={member.name} width={480} height={480} loading="lazy" decoding="async" className="h-full w-full object-cover" />
                             </div>
                             <div className="flex flex-col gap-1 p-3">
                                 <p className="text-sm font-semibold text-white">{member.name}</p>
@@ -129,7 +120,7 @@ export default function OurTeamPage() {
                                     ))}
                                 </div>
                             </div>
-                        </Link>
+                        </a>
                     ))}
                 </div>
             </section>

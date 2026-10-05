@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading, Hint, Step, DocVideo, TokenAddress, TipsList } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
@@ -50,7 +49,7 @@ export default function WrapPage() {
                 </div>
                 <Hint type="success">
                     <strong className="text-white/80">Optional: Add to Cart</strong> — Use the shopping cart to batch this wrap with other transactions.{" "}
-                    <Link href="/features/shopping-cart" className="underline underline-offset-2 hover:text-white/80">Learn more →</Link>
+                    <a href="/features/shopping-cart" className="underline underline-offset-2 hover:text-white/80">Learn more →</a>
                 </Hint>
             </section>
 

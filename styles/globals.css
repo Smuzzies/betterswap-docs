@@ -1,121 +1,163 @@
 @import "tailwindcss";
 
+@source "../app";
+@source "../components";
+
+@font-face {
+    font-family: "Rethink Sans";
+    font-style: normal;
+    font-weight: 400 800;
+    font-display: swap;
+    src: url("/fonts/rethink-sans-latin.woff2") format("woff2");
+}
+
+/* Palette taken from betterswap.io */
 @theme {
-    /* Colors */
-    --color-background: hsl(220 43% 3%);
-    --color-foreground: hsl(0 0% 100%);
-    --color-primary: hsl(221 85% 45%);
-    --color-hardBlack: hsl(220 43% 3%);
-    --color-pools: hsl(281 63% 37%);
-    --color-vebetter: hsl(98 49% 51%);
-    --color-link: hsl(221 85% 60%);
-    --color-soft: hsl(217 25% 10%);
-    --color-softer: hsl(220 16% 15%);
-    --color-success: hsl(98 49% 51%);
-    --color-error: hsl(0 85% 45%);
-    --color-warning: hsl(33 89% 48%);
+    --color-background: #04060a;
+    --color-foreground: #fff;
+    --color-primary: #114fd6;
+    --color-primary-light: #5b8cff;
+    --color-pools: #742399;
+    --color-vebetter: #72bf44;
+    --color-link: #5b8cff;
+    --color-soft: #131820;
+    --color-softer: #20242c;
+    --color-success: #72bf44;
+    --color-error: #d61111;
+    --color-warning: #e8860f;
 
-    /* Background images */
-    --background-image-gray-gradient: linear-gradient(248.66deg, #070c14 0%, #04060a 100%);
-    --background-image-glass-effect-gradient: linear-gradient(
-        to bottom left,
-        hsla(0, 0%, 100%, 0.06) 0%,
-        hsla(0, 0%, 100%, 0.055) 15.5%,
-        hsla(0, 0%, 100%, 0.035) 29%,
-        hsla(0, 0%, 100%, 0.029) 41.2%,
-        hsla(0, 0%, 100%, 0.024) 52.9%,
-        hsla(0, 0%, 100%, 0.018) 64.7%,
-        hsla(0, 0%, 100%, 0.013) 77.5%,
-        hsla(0, 0%, 100%, 0.01) 100%
-    );
-
-    /* Font */
-    --font-sans: var(--font-rethink), ui-sans-serif, system-ui, sans-serif;
+    --font-sans: "Rethink Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 @layer base {
     html {
         background: var(--color-background);
+        color-scheme: dark;
         scrollbar-gutter: stable;
-        overflow-y: auto;
     }
 
+    /* no body background: it would paint over the fixed .page-glow layer */
     body {
-        background-image: var(--background-image-gray-gradient);
         color: var(--color-foreground);
         font-family: var(--font-sans);
     }
+
+    body:has(#nav-toggle:checked) {
+        overflow: hidden;
+    }
+
+    ::selection {
+        background: color-mix(in srgb, var(--color-primary) 60%, transparent);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-primary-light);
+        outline-offset: 2px;
+    }
 }
 
-@layer utilities {
-    .gradient-border-r {
-        position: relative;
+@layer components {
+    /* Card surface, like the swap panels on betterswap.io */
+    .panel {
+        border: 1px solid rgb(255 255 255 / 0.08);
+        background: linear-gradient(to bottom left, rgb(255 255 255 / 0.045), rgb(255 255 255 / 0.015)), #070a10;
     }
 
-    .gradient-border-r::before {
+    /* Pill button with the blue under-glow used by "Connect Wallet" */
+    .btn-glow {
+        border: 1px solid rgb(255 255 255 / 0.12);
+        background: linear-gradient(180deg, #0b0f17 0%, #05070c 100%);
+        box-shadow:
+            inset 0 -1px 0 0 rgb(17 79 214 / 0.9),
+            0 8px 18px -10px rgb(17 79 214 / 0.9);
+        transition: border-color 150ms, box-shadow 150ms;
+    }
+
+    .btn-glow:hover {
+        border-color: rgb(255 255 255 / 0.22);
+        box-shadow:
+            inset 0 -1px 0 0 rgb(91 140 255 / 1),
+            0 10px 22px -10px rgb(17 79 214 / 1);
+    }
+
+    /* "Trade Smart. Trade Better." heading treatment */
+    .title-gradient {
+        background: linear-gradient(180deg, #ffffff 0%, #c9d6ff 55%, #7ea2ff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    /* Fixed blue glow + dot grid along the bottom of the viewport */
+    .page-glow {
+        position: fixed;
+        inset: auto 0 0 0;
+        height: 45vh;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.55;
+        background:
+            radial-gradient(60% 90% at 50% 120%, rgb(17 79 214 / 0.55), transparent 70%),
+            radial-gradient(35% 70% at 100% 110%, rgb(0 200 255 / 0.45), transparent 70%),
+            radial-gradient(30% 60% at 0% 110%, rgb(0 170 255 / 0.3), transparent 70%);
+    }
+
+    .page-glow::after {
         content: "";
         position: absolute;
         inset: 0;
-        border-radius: inherit;
-        border: 1px solid transparent;
-        background:
-            linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)),
-            radial-gradient(52.71% 174.93% at 100% 0%, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 32.92%) border-box;
-        -webkit-mask:
-            linear-gradient(#fff 0 0) padding-box,
-            linear-gradient(#fff 0 0);
-        -webkit-mask-composite: destination-out;
-        mask:
-            linear-gradient(#fff 0 0) padding-box,
-            linear-gradient(#fff 0 0);
-        mask-composite: exclude;
-        pointer-events: none;
-        z-index: 0;
+        background-image: radial-gradient(rgb(255 255 255 / 0.18) 1px, transparent 1.2px);
+        background-size: 18px 18px;
+        mask-image: linear-gradient(to top, black, transparent);
     }
 
-    .gradient-border-l {
-        position: relative;
-    }
-
-    .gradient-border-l::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        border: 1px solid transparent;
-        background:
-            linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)),
-            radial-gradient(50% 165.94% at 0% 0%, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 32.92%) border-box;
-        -webkit-mask:
-            linear-gradient(#fff 0 0) padding-box,
-            linear-gradient(#fff 0 0);
-        -webkit-mask-composite: destination-out;
-        mask:
-            linear-gradient(#fff 0 0) padding-box,
-            linear-gradient(#fff 0 0);
-        mask-composite: exclude;
-        pointer-events: none;
-        z-index: 0;
+    .heading-gradient-trade,
+    .heading-gradient-pools,
+    .heading-gradient-vebetter {
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .heading-gradient-trade {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.52) 0%, #ffffff 100%), #114fd6;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        background-image: linear-gradient(180deg, #ffffff 0%, #7ea2ff 100%);
     }
 
     .heading-gradient-pools {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.52) 0%, #ffffff 100%), #742399;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        background-image: linear-gradient(180deg, #ffffff 0%, #c78be6 100%);
     }
 
     .heading-gradient-vebetter {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.52) 0%, #ffffff 100%), #72bf44;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        background-image: linear-gradient(180deg, #ffffff 0%, #a6e07f 100%);
+    }
+
+    /* Simple data tables */
+    .doc-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+    }
+
+    .doc-table th,
+    .doc-table td {
+        padding: 0.625rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid rgb(255 255 255 / 0.06);
+    }
+
+    .doc-table th {
+        color: rgb(255 255 255 / 0.5);
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .doc-table td {
+        color: rgb(255 255 255 / 0.75);
+    }
+
+    .doc-table tr:last-child td {
+        border-bottom: 0;
     }
 }

@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading, Hint } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
@@ -52,7 +51,7 @@ export default function VeBetterDashboardPage() {
                 <SectionHeading id="tabs" label="VeBetter Tabs and Functions" />
                 <div className="flex flex-col gap-3">
                     {tabs.map((tab) => (
-                        <div key={tab.id} id={tab.id} className="gradient-border-l relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
+                        <div key={tab.id} id={tab.id} className="panel rounded-2xl p-4">
                             <p className={`text-base font-semibold ${tab.gradient}`}>{tab.name}</p>
                             <p className="mt-2 text-sm leading-relaxed text-white/70 lg:text-base">{tab.desc}</p>
                         </div>
@@ -60,7 +59,7 @@ export default function VeBetterDashboardPage() {
                 </div>
                 <Hint type="success">
                     <strong className="text-white/80">Optional: Add to Cart</strong> — Batch your VeBetter actions (liquidity, token swaps, reward claims) with other transactions using the shopping cart.{" "}
-                    <Link href="/features/shopping-cart" className="underline underline-offset-2 hover:text-white/80">Learn more →</Link>
+                    <a href="/features/shopping-cart" className="underline underline-offset-2 hover:text-white/80">Learn more →</a>
                 </Hint>
             </section>
 
@@ -70,12 +69,12 @@ export default function VeBetterDashboardPage() {
                 <p className="text-sm leading-relaxed text-white/70 lg:text-base">
                     The Liquidity tab on the VeBetter Dashboard is the home of Pool2Earn — BetterSwap's program for earning B3TR rewards by providing liquidity to the B3TR/VET pair.
                 </p>
-                <Link
+                <a
                     href="/features/pool2earn"
-                    className="gradient-border-r relative inline-flex w-fit items-center gap-2 rounded-xl bg-glass-effect-gradient px-4 py-2.5 text-sm font-semibold text-white/70 backdrop-blur-xl transition-colors hover:bg-white/[0.03] hover:text-white"
+                    className="panel inline-flex w-fit items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold text-white/70 transition-colors hover:bg-white/[0.03] hover:text-white"
                 >
                     Learn about Pool2Earn →
-                </Link>
+                </a>
             </section>
 
             {/* VeBetterDAO cross-link */}
@@ -88,7 +87,7 @@ export default function VeBetterDashboardPage() {
                     href="https://docs.vebetterdao.org/vebetterdao/voter-rewards"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="gradient-border-r relative inline-flex w-fit items-center gap-2 rounded-xl bg-glass-effect-gradient px-4 py-2.5 text-sm font-semibold text-white/70 backdrop-blur-xl transition-colors hover:bg-white/[0.03] hover:text-white"
+                    className="panel inline-flex w-fit items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold text-white/70 transition-colors hover:bg-white/[0.03] hover:text-white"
                 >
                     VeBetterDAO Voter Rewards ↗
                 </a>

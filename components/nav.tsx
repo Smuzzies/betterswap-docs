@@ -10,6 +10,7 @@ export const navSections = [
     {
         group: "Features",
         items: [
+            { label: "Free Swap Gas", href: "/features/free-swap-gas" },
             { label: "Pool2Earn", href: "/features/pool2earn" },
             { label: "Shopping Cart", href: "/features/shopping-cart" },
         ],
@@ -33,5 +34,9 @@ export const navSections = [
     {
         group: "VeBetter",
         items: [{ label: "Dashboard", href: "/vebetter/dashboard" }],
+    },
+    {
+        group: "Legal",
+        items: [{ label: "Privacy", href: "/privacy" }],
     },
 ];

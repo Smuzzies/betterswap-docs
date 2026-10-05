@@ -1,3 +1,9 @@
+## This project
+
+Static docs site: `build.tsx` renders `app/**/page.tsx` with `react-dom/server` into `dist/` (no client JS, no Next.js). Use plain `<a>`/`<img>`, keep components server-only, and add new pages to `components/nav.tsx`. `bun run dev` previews, `bun run build` builds, Docker serves `dist/` with nginx.
+
+---
+
 
 Default to using Bun instead of Node.js.
 

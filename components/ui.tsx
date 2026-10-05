@@ -1,15 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
-
 export const Hint = ({ type, children }: { type: "info" | "warning" | "danger" | "success"; children: React.ReactNode }) => {
     const accent = {
-        info: "bg-primary/70",
-        warning: "bg-warning/70",
-        danger: "bg-error/70",
-        success: "bg-success/70",
+        info: "bg-primary",
+        warning: "bg-warning",
+        danger: "bg-error",
+        success: "bg-success",
     };
     return (
-        <div className="gradient-border-r relative my-4 flex gap-3 rounded-xl bg-glass-effect-gradient px-4 py-3 backdrop-blur-xl">
+        <div className="panel my-4 flex gap-3 rounded-2xl px-4 py-3">
             <div className={`w-1 shrink-0 self-stretch rounded-full ${accent[type]}`} />
             <p className="text-sm leading-relaxed text-white/70 lg:text-base">{children}</p>
         </div>
@@ -19,8 +16,8 @@ export const Hint = ({ type, children }: { type: "info" | "warning" | "danger" |
 export const Step = ({ n, title, children }: { n: number; title: string; children: React.ReactNode }) => (
     <div className="flex gap-4">
         <div className="flex shrink-0 flex-col items-center">
-            <div className="flex size-7 shrink-0 items-center justify-center rounded-full bg-soft text-xs font-bold text-white/70 ring-1 ring-white/10">{n}</div>
-            <div className="w-0.5 flex-1 bg-white/10" />
+            <div className="flex size-7 shrink-0 items-center justify-center rounded-full border border-white/10 bg-soft text-xs font-bold text-white/80">{n}</div>
+            <div className="w-px flex-1 bg-white/10" />
         </div>
         <div className="pb-6">
             <p className="mb-1 font-semibold text-white">{title}</p>
@@ -30,51 +27,46 @@ export const Step = ({ n, title, children }: { n: number; title: string; childre
 );
 
 export const PageTitle = ({ title, subtitle }: { title: string; subtitle?: string }) => (
-    <div className="flex flex-col gap-2 border-b border-white/5 pb-8">
-        <h1 className="text-3xl font-semibold text-white lg:text-4xl">{title}</h1>
+    <div className="flex flex-col gap-3 border-b border-white/5 pb-8">
+        <h1 className="title-gradient text-3xl font-semibold tracking-tight lg:text-4xl">{title}</h1>
         {subtitle && <p className="text-base leading-relaxed text-white/60 lg:text-lg">{subtitle}</p>}
     </div>
 );
 
 export const SectionHeading = ({ id, label }: { id: string; label: string }) => (
-    <h2 id={id} className="scroll-mt-20 text-xl font-semibold text-white lg:text-2xl">{label}</h2>
+    <h2 id={id} className="scroll-mt-24 text-xl font-semibold text-white lg:text-2xl">
+        <a href={`#${id}`} className="hover:text-white/80">{label}</a>
+    </h2>
 );
 
 export const SubHeading = ({ id, label }: { id: string; label: string }) => (
-    <h3 id={id} className="scroll-mt-20 text-base font-semibold tracking-tight text-white/90 lg:text-lg">{label}</h3>
+    <h3 id={id} className="scroll-mt-24 text-base font-semibold tracking-tight text-white/90 lg:text-lg">{label}</h3>
 );
 
 export const DocImage = ({ src, alt, caption, maxW = "max-w-2xl" }: { src: string; alt: string; caption?: string; maxW?: string }) => (
-    <figure className={`my-4 overflow-hidden rounded-2xl border border-white/5 bg-soft ${maxW}`}>
-        <Image src={src} alt={alt} width={1200} height={750} className="w-full object-contain" unoptimized />
+    <figure className={`panel my-4 overflow-hidden rounded-2xl ${maxW}`}>
+        <img src={src} alt={alt} loading="lazy" decoding="async" className="w-full object-contain" />
         {caption && <figcaption className="px-4 py-2 text-center text-xs text-white/50">{caption}</figcaption>}
     </figure>
 );
 
 export const DocVideo = ({ src, caption, maxW = "max-w-2xl" }: { src: string; caption?: string; maxW?: string }) => (
-    <figure className={`my-4 overflow-hidden rounded-2xl border border-white/5 bg-soft ${maxW}`}>
-        <video
-            src={src}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full object-contain"
-        />
+    <figure className={`panel my-4 overflow-hidden rounded-2xl ${maxW}`}>
+        <video src={src} autoPlay loop muted playsInline preload="metadata" className="w-full object-contain" />
         {caption && <figcaption className="px-4 py-2 text-center text-xs text-white/50">{caption}</figcaption>}
     </figure>
 );
 
 export const TokenAddress = ({ symbol, address, url }: { symbol: string; address: string; url: string }) => (
     <li className="flex flex-wrap items-center gap-2 text-sm lg:text-base">
-        <span className="rounded bg-soft px-2 py-0.5 font-mono font-semibold text-white">{symbol}</span>
-        <Link href={url} target="_blank" rel="noopener noreferrer" className="break-all font-mono text-xs text-white/50 transition-colors hover:text-white/70">{address}</Link>
+        <span className="rounded-full border border-white/10 bg-soft px-2.5 py-0.5 font-mono text-sm font-semibold text-white">{symbol}</span>
+        <a href={url} target="_blank" rel="noopener noreferrer" className="break-all font-mono text-xs text-white/50 transition-colors hover:text-white/70">{address}</a>
     </li>
 );
 
 export const TipsList = ({ tips }: { tips: { title: string; items: string[] }[] }) => (
-    <div className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
-        <p className="mb-3 text-sm font-semibold text-white/70">Tips</p>
+    <div className="panel rounded-2xl p-4">
+        <p className="mb-3 text-sm font-semibold text-primary-light">Tips</p>
         <div className="flex flex-col gap-3">
             {tips.map((t) => (
                 <div key={t.title}>
@@ -89,8 +81,15 @@ export const TipsList = ({ tips }: { tips: { title: string; items: string[] }[] 
 );
 
 export const Card = ({ label, desc, gradient }: { label: string; desc: string; gradient?: string }) => (
-    <div className="gradient-border-l relative flex flex-col gap-1 rounded-xl bg-glass-effect-gradient p-4 backdrop-blur-xl transition-colors hover:bg-white/[0.03]">
+    <div className="panel flex h-full flex-col gap-1 rounded-2xl p-4 transition-colors hover:border-white/15">
         <p className={`text-sm font-semibold ${gradient ? `text-transparent ${gradient}` : "text-white/80"}`}>{label}</p>
         <p className="text-sm text-white/60">{desc}</p>
+    </div>
+);
+
+export const Stat = ({ value, label }: { value: string; label: string }) => (
+    <div className="panel flex flex-col gap-1 rounded-2xl p-4">
+        <p className="text-2xl font-semibold text-white">{value}</p>
+        <p className="text-sm text-white/60">{label}</p>
     </div>
 );

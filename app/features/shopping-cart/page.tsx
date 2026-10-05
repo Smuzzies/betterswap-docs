@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/lib/page";
 import { PageTitle, SectionHeading, SubHeading, Hint, Step } from "@/components/ui";
 import { PageNav } from "@/components/page-nav";
 
@@ -91,7 +90,7 @@ export default function ShoppingCartPage() {
                             desc: "Add or remove items from the cart before execution. Clear overview of pending transactions before blockchain confirmation.",
                         },
                     ].map((item) => (
-                        <div key={item.title} className="gradient-border-r relative rounded-2xl bg-glass-effect-gradient p-4 backdrop-blur-xl">
+                        <div key={item.title} className="panel rounded-2xl p-4">
                             <p className="text-sm font-semibold text-white/80">{item.title}</p>
                             <p className="mt-1 text-sm leading-relaxed text-white/70 lg:text-base">{item.desc}</p>
                         </div>
